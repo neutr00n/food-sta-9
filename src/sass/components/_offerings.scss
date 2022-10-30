@@ -105,7 +105,6 @@
             margin-right: 67px;
         }
     }
-
     @media screen and (min-width:$tablet) {
         width: 252px;
     }
@@ -155,7 +154,7 @@
     border-radius: 30px;
     transition: border-color $transition-duration $timing-function;
 
-    &:hover {
+    &:hover,&:focus {
         border-color: getColor('btn-border-accent-color');
     }
 }
@@ -164,13 +163,21 @@
     display: flex;
     align-items: center;
     color: getColor('primary-text-color');
-
+    transition: color $transition-duration $timing-function;
     // needed color changes
     @media screen and (min-width:$desktop) {
         display: none;
     }
+         &:hover,
+         &:focus {
+             color: getColor('btn-border-accent-color');
+         }
 }
 
 .offerings__arrow-icon {
     margin-left: 8px;
+    transition: fill $transition-duration $timing-function;
+}
+.offerings__link:hover .offerings__arrow-icon,.offerings__link:focus .offerings__arrow-icon{
+fill:getColor('btn-border-accent-color');
 }
