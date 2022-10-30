@@ -25,6 +25,16 @@ body {
   }
 }
 
+.modal-container {
+  min-width: 320px;
+  padding: $indent 20px;
+
+  @media screen and (min-width: $tablet) {
+      padding: $indent;
+      min-width: 458px;
+  }
+}
+
 .title {
   font-size: 28px;
   line-height: 1.18;
@@ -49,4 +59,14 @@ body {
 
 .no-scroll {
   overflow: hidden;
+}
+
+// Стилі для приховування модального вікна
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
 }

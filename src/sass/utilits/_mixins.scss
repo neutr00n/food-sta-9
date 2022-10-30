@@ -1,0 +1,18 @@
+
+
+// Правий відступ крім останнього нащадка!
+@mixin right-indent($indent) {
+    &:not(:last-child) {
+      margin-right: $indent;
+    }
+    }
+  
+  
+   // Нижній відступ крім останнього нащадка!
+    @mixin bottom-indent($indent) {
+      &:not(:last-child) {
+        margin-bottom: $indent;
+      }
+      }
+
+      
