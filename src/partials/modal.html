@@ -1,0 +1,34 @@
+
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button class="modal__close-button" type="button" data-modal-close>
+        <svg width="18px" height="18px"><use href="./images/symbol-defs.svg#modal-button-close"></use></svg>
+      </button>
+      <form class="send-form">
+        <b class="send-form__title">Оставте свои данные, мы вам перезвоним</b>
+        <ul class="list send-form__list">
+          <li class="send-form__field">
+            <label class="send-form__label" for="name">Имя</label>
+            <div class="send-form__box">
+              <input class="input send-form__input" type="text" name="name" id="name">
+            </div>
+          </li>
+          <li class="send-form__field">
+            <label class="send-form__label" for="tel">Телефон</label>
+            <div class="send-form__box">
+              <input class="input send-form__input" type="tel" name="tel" id="tel">
+            </div>
+          </li>
+          <li class="send-form__field">
+            <label class="send-form__label" for="mail">Почта</label>
+            <div class="send-form__box">
+              <input class="input send-form__input" type="email" name="mail" id="mail">
+            </div>
+          </li>
+        </ul>
+        
+        <button class="button send-form__submit-button" type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
