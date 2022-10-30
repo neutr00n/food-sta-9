@@ -1,0 +1,151 @@
+.subscribe-section {
+  padding-bottom: 60px;
+
+  box-shadow: inset 0px -40px 13px -31px rgba(245, 245, 245, 1);
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 100px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 64px;
+  }
+}
+
+.container {
+  outline: 1px solid tomato;
+}
+
+.subscribe-picture {
+  display: flex;
+
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+    margin-bottom: 17px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    justify-content: flex-end;
+
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    min-width: 608px;
+  }
+}
+
+.subscribe__title {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+
+  @media screen and (min-width: 768px) {
+    font-size: 42px;
+  }
+}
+
+.subscribe__text {
+  margin-bottom: 40px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 24px;
+
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.subscribe-form {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.subscribe-form__input {
+  padding: 12px 11px;
+
+  width: 100%;
+
+  border: 0.85px solid getColor('border-input-color');
+  border-radius: 30px;
+
+  background-color: transparent;
+
+  &:focus {
+    outline: 0;
+    outline-offset: 0;
+    border-color: #7eb101;
+  }
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+
+    color: #505050;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    min-width: 394px;
+  }
+
+  transition: border-color $transition-duration $timing-function;
+}
+
+.subscribe-form__btn {
+  padding: 11px 22px;
+
+  border: none;
+  border-radius: 30px;
+  background-color: #bbf330;
+  cursor: pointer;
+
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+
+  color: getColor('primary-text-color');
+
+  &:hover,
+  &:focus {
+    background-color: getColor('btn-bg-accent-color');
+  }
+
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: block;
+
+    margin-left: 22px;
+
+    height: 100%;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-left: 32px;
+  }
+
+  transition: background-color $transition-duration $timing-function;
+}
+
+.subscribe-container--positioning {
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
