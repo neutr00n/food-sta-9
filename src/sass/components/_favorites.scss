@@ -20,12 +20,11 @@
     gap: 28px;
 }
 
-.favorites__cards-item{
-    @media screen and (max-width: $mobile) {
+.favorites__cards-item {
         width: 280px;
         height: 282px;
-      }
-    @media screen and (min-width: $tablet) {
+    
+        @media screen and (min-width: $tablet) {
         width: 336px;
         height: 338px;
       }
@@ -49,7 +48,7 @@
 
 
 .favorites__cards-item--mobile{
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: $tablet) {
         display: none;
       }
 }
