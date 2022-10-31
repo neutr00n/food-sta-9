@@ -2,18 +2,17 @@
     padding-bottom: 60px;
     box-shadow: inset 0px -40px 13px -31px rgba(245, 245, 245, 1);
     
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
         padding-bottom: 100px;
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: $desktop) {
         padding-bottom: 64px;
     }
 }
 
 .subscribe__container {
-    outline: 1px solid tomato;
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: $desktop) {
             display: flex;
             flex-direction: row-reverse;
             align-items: center;
@@ -24,17 +23,17 @@
 .subscribe-picture {
     display: flex;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $tablet) {
         justify-content: center;
         margin-bottom: 17px;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
+    @media screen and (min-width: $tablet) and (max-width: $tablet-max) {
         justify-content: flex-end;
         margin-bottom: 20px;
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: $desktop) {
         min-width: 608px;
     }
 }
@@ -50,7 +49,7 @@
     font-size: 14px;
     line-height: 1.14;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
         margin-bottom: 24px;
         font-size: 16px;
         line-height: 1.5;
@@ -58,7 +57,7 @@
 }
 
 .subscribe-form {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
         display: flex;
     }
 }
@@ -82,11 +81,11 @@
         color: getColor('placeholder-modal-text-color');
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: $mobile-max) {
         margin-bottom: 20px;
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
         min-width: 394px;
     }
 
@@ -109,18 +108,18 @@
         background-color: getColor('btn-bg-accent-color');
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: $mobile-max) {
         display: block;
         margin-left: auto;
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
         display: block;
         margin-left: 22px;
         height: 100%;
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: $desktop) {
         margin-left: 32px;
     }
 
