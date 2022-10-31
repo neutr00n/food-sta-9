@@ -35,27 +35,73 @@ background-image: url('../images/footer/footer-background-desk_1x.jpg');
 
 
 
+@media screen and (min-width: 480px) {
+    
+}
 
+@media screen and (min-width: 768px) {
+    
+}
+
+@media screen and (min-width: 1200px) {
+   
+}
 
 /*------------ 1rst div  ------------*/
 
+
 .footer__menu{
-display: flex;
+    display: flex;
 // padding-left: 16px;
 // padding-right: 16px;
 align-items: center;
-// padding-top: 100px;
-justify-content: space-between;
+//  padding-top: 100px;
+  
+
+        
+        flex-wrap: wrap;
+@media screen and (min-width: 480px) {
+     margin-top: -20;
+    justify-content:center;
+    
 }
+
+    @media screen and (min-width: 768px) {
+        margin-top: 60;
+justify-content: space-between;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-top: 0;
+        justify-content: space-between;
+    }
+    
+}
+
+
+
+
 .footer__block{
     display: flex;
     align-items: center;
+    @media screen and (min-width: 480px) {
+        display: flex;
+         margin-right: 80;
+    }
 }
 
 .footer__logo {
     display: block;
+      padding-right: 80;
+      padding-bottom:150 ;
+    @media screen and (min-width: 768px) {
+margin-right: 80px;
+    padding-bottom: 0;
+    }
+    @media screen and (min-width: 1200px) {
     margin-right: 148px;
-
+    padding-bottom: 0;
+    }
   }
 
 
@@ -63,12 +109,23 @@ justify-content: space-between;
 display: flex;
 
 flex-direction: column;
-gap: 39px;
-
+gap: 20px;
+padding-bottom: 40;
 @media screen and (min-width: 768px) {
-    flex-direction: row;
+    display: flex;
+    gap: 39;
+        flex-direction: row;
+        
+}
+@media screen and (min-width: 1200px) {
+    display: flex;
+    gap: 39;
+        flex-direction: row;
 }
 }
+
+
+
 .footer__item-link{
 color: #2C2C2C;
     line-height: calc(16 / 14);
@@ -86,11 +143,6 @@ color: #2C2C2C;
 }
 
 
-
-
-
-
-
 .footer__form-title{
 font-family: 'Roboto';
     font-style: normal;
@@ -98,26 +150,27 @@ font-family: 'Roboto';
     color: #2C2C2C;
    margin-bottom: 12;
     font-size: 14px;
+    padding-top: 10;
+    @media screen and (min-width: 768px) {
+            display: flex;
+    padding-top: 57;
+            flex-direction: row;
+        }
+                @media screen and (min-width: 1200px) {
+                    padding-top: 30;
+                }
 }
 
 
 
-@media screen and (min-width: 480px) {
 
-}
-
-@media screen and (min-width: 768px) {
-
-}
-
-@media screen and (min-width: 1200px) {
-
-}
 .footer__subscription-wrapper{
     display: flex;
 flex-direction: column;
 
 }
+
+
 
 .subscription__input {
     text-align: left;
@@ -130,9 +183,28 @@ flex-direction: column;
     background: #FEFEFE;
     border: 0.854167px solid #FFE550;
     font-size: 12px;
-    transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);       
+    transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (min-width: 480px) {
+        display: flex;
+       flex-wrap: wrap; 
+       padding-left: 12;
+    }
+        @media screen and (min-width: 768px) {
+            display: inline;
+    padding-left: 12;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            display: inline;
+    padding-left: 12;
+            
+        }
 }
 
+
+ .input[type="email"]{
+    padding-left: 13px;
+}
 
 .button--subscription {
     box-sizing: border-box;
@@ -143,12 +215,46 @@ width: 103px;
         border: 0.854167px solid #7EB101;
         font-size: 13px;
         transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
-        
+         @media screen and (min-width: 480px) {
+                 margin-left: 175;
+                 margin-bottom: 12;
+            }
+                          @media screen and (min-width: 768px) {
+                             margin-left: -1;
+            
+                          }
+            
+                          @media screen and (min-width: 1200px) {
+                            margin-left: -1;
+            
+            
+                         }
 }
+
+.button--subscription:hover,
+.button--subscription:focus{
+    background: #FFE550;
+        border: 0.854167px solid #7EB101;
+}
+
+.button--subscription:active{
+background: #FFE550;
+border: 0.854167px solid #7EB101;
+}
+
 .form__text{
     display: block;
-    font-size: 12px;
+    font-size: 10px;
     line-height: calc(14 / 12);
+@media screen and (min-width: 768px) {
+
+        font-size: 12px;
+    }
+
+    @media screen and (min-width: 1200px) {
+
+        font-size: 12px;
+    }
 }
 
 
@@ -184,40 +290,102 @@ width: 103px;
 /*------------ 2nd div  ------------*/
 
 .footer__rules{
- margin-top: 80px;
-display: flex;
+margin-top: 100px;
+display: inline;
 align-items: center;
 justify-content: space-between;
+@media screen and (min-width: 768px) {
+        
+display: flex;
+    }
+
+    @media screen and (min-width: 1200px) {
+       
+display: flex;
+
+    }
 }
 
 
 .footer__list-rules {
-    display:flex;    
-    padding-left: 16;
-    gap: 20;
+       display: flex;
+     padding-left: 30;
+    gap: 31;
+@media screen and (min-width: 480px) {
+    margin-top: 40;
+    gap: 43;
+    padding-top: 10;
+    padding-bottom: 10;
+    margin-left: -26;
+   justify-content: center;
+}
+
+    @media screen and (min-width: 768px) {
+
+        margin-top: -40;
+     margin-bottom: 50;
+     display: flex;
+    padding-top: 50;
+        padding-bottom: 0;
+     gap: 50;
+     
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-top: 0;
+padding-top: 0;
+    padding-bottom: 0;
+    }
 }
 
 .footer__item-rule {
-    display: inline;
+    display: flex;
+    flex-wrap: nowrap;
     color: #7EB101;
     font-style: normal;
     font-weight: 400;
     text-decoration-line: underline;
-    font-size: 12px;
+    font-size: 10px;
     justify-content: space-between;
     line-height: calc(14 / 12);
-}
+    @media screen and (min-width: 768px) {
+            
+            font-size: 12px;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            
+            font-size: 12px;
+        }
+    }
+
 
 .footer__text{
+     display: flex;
     font-style: normal;
-    font-weight: 400;
+    justify-content: center;
+    margin-top: 30;
     color: #2C2C2C;
-    font-size: 12px;
+    font-size: 10px;
     line-height: calc(14 / 12);
+    @media screen and (min-width: 768px) {
+        margin-top: -40;
+        font-size: 12px;
+    }
     
+        @media screen and (min-width: 1200px) {
+            margin-top: -50;
+            font-size: 12px;
+        }
 }
+   
 
 .footer__rule-link{
     color: #7EB101;
     line-height: calc(14 / 12);
 }
+@media screen and (min-width: 480px) {}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 1200px) {}
