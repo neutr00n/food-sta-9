@@ -1,3 +1,39 @@
+// Mixins
+// Правий відступ крім останнього нащадка!
+@mixin right-indent($indent) {
+  &:not(:last-child) {
+    margin-right: $indent;
+  }
+  }
+ // Нижній відступ крім останнього нащадка!
+  @mixin bottom-indent($indent) {
+    &:not(:last-child) {
+      margin-bottom: $indent;
+    }
+    }
+
+// Стилі для приховування модального вікна
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+// Контейнер модалки
+.modal-container {
+  min-width: 320px;
+  padding: $indent 20px;
+
+  @media screen and (min-width: $tablet) {
+      padding: $indent;
+      min-width: 458px;
+  }
+}
+
+// Модалка
 .modal {
     position:absolute;
     visibility: visible;
@@ -67,13 +103,13 @@
   }
   .order-form__input {
     width: 100%;
-    border: 1px solid getColor('border-modal-iput-color');
+    border: 1px solid rgba(18, 18, 18, 0.12);
     border-radius: 30px;
     padding: 14px 12px;
     outline: none;
 
     &::placeholder {
-        color: getColor('placeholder-modal-text-color');
+        color: #c4c4c4;
         line-height: 1.25;
       }
   }
