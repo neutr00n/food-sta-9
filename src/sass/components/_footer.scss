@@ -9,7 +9,7 @@
 
 @media screen and (max-width: $mobile-max) {
     .footer__container {
-        background-repeat: no-repeat;
+         background-repeat: no-repeat;
         background-image: url('../images/footer/footer-background-mob-top_1x.jpg')
         ,
             url('../images/footer/footer-background-mob-bottom_1x.jpg');
@@ -218,6 +218,7 @@
 .button--subscription {
     box-sizing: border-box;
     border-radius: 30px;
+    margin-left: 175;
     width: 103px;
     height: 43px;
     background: getColor('secondary-bg-color');
@@ -232,7 +233,7 @@
     }
 
     @media screen and (min-width: $tablet) {
-        margin-left: -1;
+        margin-left: -10;
 
     }
 
