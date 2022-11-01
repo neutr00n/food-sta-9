@@ -58,22 +58,21 @@
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
 
-    transform: translate(-50%) scale(1);
+    transform: translateX(-50%) scale(1);
     transition: transform 250ms linear;
 
     @media screen and (min-width: $tablet) {
-      padding: $indent;
-      min-width: 458px;
-  }
-
-    @media screen and (min-width: $tablet) and (max-width: $tablet-max) {
-      top:50%;
-      transform: translate(-50%, -50%) scale(1);
+      top:98px;
     }
     
     @media screen and (min-width: $desktop) {
       top:129px;
-  }
+    }
+
+    @media screen and (min-width: $tablet) {
+      padding: $indent;
+      min-width: 458px;
+    }
   }
 
   .modal__close-button {
@@ -91,8 +90,19 @@
     
     border: none;
     border-radius: 50%;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.06));
     
     cursor: pointer;
+    outline: none;
+
+    &:hover, &:focus {
+      fill: getColor('btn-border-accent-color');
+    }
+
+    &:focus {
+      border: 1px solid getColor('btn-border-accent-color');;
+    }
   }
 
 
@@ -131,19 +141,29 @@
     height: 48px;
 
     border-radius: 30px;
-    border: 1px solid getColor('border-color');
+    border: 1px solid getColor('border-input-color');
 
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
 
     outline: none;
 
+    // Placeholder
     &::placeholder {
         line-height: 1.25;
         color: #c4c4c4;
       }
+    
+    // Валідність
+    &:focus:invalid {
+      border: 2px solid getColor('border-error-color');
+    }
+    &:valid {
+      border: 2px solid getColor('btn-bg-accent-color');
+    }
 
-    @media screen and (min-width: $tablet) {
-      border: 1px solid rgba(18, 18, 18, 0.12);
+    // Ховеры, фокусы
+    &:hover, &:focus {
+      border-color:getColor('btn-border-accent-color');
     }
   }
   
@@ -163,4 +183,19 @@
     border: 2px solid getColor('border-color');
     
     cursor: pointer;
+    outline: none;
+
+    &:hover, &:focus {
+      border-color: getColor('btn-border-accent-color');
+    }
   }
+
+  // Анимация
+.button,
+.input
+{
+  transition-property: 
+  color, fill, background-color, border-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
