@@ -1,0 +1,283 @@
+.hero{
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+&__text{
+   margin-top: 28px;
+   margin-bottom: 28px;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 1.5;
+
+@media screen and (min-width: $tablet){
+    font-size: 16px;
+    margin-top: 44px;
+    margin-bottom: 40px;
+
+}
+@media screen and (min-width: $desktop){
+    margin-top: 28px;
+}
+}
+
+@media screen and (min-width: $tablet){
+    &{
+        padding-bottom: 0;
+
+    }
+   
+}
+ @media screen and (min-width: $desktop){
+    &{
+        padding: 0;
+    }
+     &__title{
+        font-size: 48px;
+    }
+ }
+
+}
+
+
+    @media screen and (min-width: $desktop){
+      .hero__enjoy{
+        width: 500px;
+      }
+   
+      .container__hero {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    }
+    
+    @media screen and (min-width: $tablet) and (max-width: $desktop)
+    {
+        .hero__title 
+        {width: 537px;}
+
+        .hero__text 
+        {width: 336px;}
+
+        .container__hero {
+            position:relative
+        }
+
+        }
+    
+ 
+.hero__button {
+background-color:getColor('link-accent-color');
+border-radius: 30px;
+padding: 6px 18px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 1.5;
+color: getColor('primary-text-color');
+align-items: center;
+text-align: center;
+
+
+border: none;
+cursor: pointer;
+transition: background-color 250ms  cubic-bezier(0.4, 0, 0.2, 1);
+
+&:hover ,&:focus{
+    background-color: getColor('btn-bg-accent-color');
+}
+}
+
+ 
+
+// ----------CСЛАЙД---------------------
+
+.slick-dotted.slick-slider{
+    margin: 0;
+}
+.slide__box {
+    
+        width: 336px;
+        height:320px;
+        overflow: hidden;
+        border-radius: 50%;
+
+ @media screen and (min-width: $tablet) and (max-width: $desktop){
+            position: absolute;
+            right: 40px;
+            top: 85px;
+
+}      
+        
+@media screen and (min-width: $desktop){
+            width: 608px;
+            height:580px;
+            margin-top: 14px;
+            margin-left: 32px;
+            
+
+        }
+    }
+
+.slide{
+    display: none;
+    @media screen and (min-width: $tablet){
+    display: flex;
+
+}
+}
+
+
+
+.slide__picture{
+    border-radius: 50%;
+    border: 14px solid getColor('border-input-color');
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: $desktop){
+        border: 26px solid getColor('border-input-color');
+
+    }
+
+}
+
+
+
+// ------убрал три точки под слайдом --------
+
+
+.slick-dots {
+    visibility: hidden;
+    
+}
+
+
+// -----кнопки слайда-------
+
+
+.slick-arrow{
+background:getColor('secondary-bg-color');
+border-radius: 8px;
+width: 28px;
+height: 34px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+
+
+
+@media screen and (min-width: $desktop){
+    &{
+        width: 40px;
+        height: 48px;
+    }
+}
+}
+
+.slick-prev {
+    left:0;
+    transform: translate(2% , -50%);
+    z-index: 1;
+     @media screen and (min-width: $desktop){
+    transform: translate(20% , -50%);
+    
+}
+
+}
+
+.slick-prev:before{
+   content: '';
+   
+   position: absolute;
+    left: 0;
+    top: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='30' fill='none'%3E%3Cpath fill='%232C2C2C' d='M.45 15.905 14.383 29.18a1.25 1.25 0 0 0 1.725 0l.015-.015a1.15 1.15 0 0 0 0-1.668l-13.12-12.5 13.12-12.494a1.15 1.15 0 0 0 0-1.668L16.108.82a1.25 1.25 0 0 0-1.725 0L.45 14.095a1.251 1.251 0 0 0 0 1.81Z'/%3E%3C/svg%3E");
+ background-repeat: no-repeat;
+ background-size: 11.49px 20.34px ;
+ background-position: 5.14px 50%;
+
+transition: background-image 250ms  cubic-bezier(0.4, 0, 0.2, 1);
+
+
+
+
+
+ @media screen and (min-width: $desktop){
+        background-size: 16.42px 29.05px ;
+        background-position: 7.06px 50%;
+    }
+    
+}
+
+.slick-next {
+   right:0;
+    transform: translate(-2% , -50%);
+    z-index: 1;
+   @media screen and (min-width: $desktop){
+    transform: translate(-20% , -50%);
+
+    
+}
+}
+
+.slick-next:before{
+   content: '';
+   
+   position: absolute;
+    left: 0;
+    top: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='30' fill='none'%3E%3Cpath fill='%232C2C2C' d='M16.55 14.095 2.617.82a1.25 1.25 0 0 0-1.725 0L.877.835a1.15 1.15 0 0 0 0 1.667l13.12 12.5L.877 27.497a1.15 1.15 0 0 0 0 1.668l.015.015a1.25 1.25 0 0 0 1.725 0L16.55 15.905a1.251 1.251 0 0 0 0-1.81Z'/%3E%3C/svg%3E");
+ background-repeat: no-repeat;
+ background-size: 11.49px 20.34px ;
+ background-position: 13.36px 50%;
+
+    
+transition: background-image 250ms  cubic-bezier(0.4, 0, 0.2, 1);
+
+
+
+
+ @media screen and (min-width: $desktop){
+        background-size: 16.42px 29.05px ;
+        background-position: 18.52px 50%;
+    }
+
+    
+
+}
+
+
+
+.slick-prev:hover.slick-prev:before, .slick-prev:focus.slick-prev:before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='30' fill='none'%3E%3Cpath fill='%237EB101' d='M.45 15.905 14.383 29.18a1.25 1.25 0 0 0 1.725 0l.015-.015a1.15 1.15 0 0 0 0-1.668l-13.12-12.5 13.12-12.494a1.15 1.15 0 0 0 0-1.668L16.108.82a1.25 1.25 0 0 0-1.725 0L.45 14.095a1.251 1.251 0 0 0 0 1.81Z'/%3E%3C/svg%3E");
+
+
+
+}
+
+.slick-next:hover.slick-next:before, .slick-next:focus.slick-next:before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='30' fill='none'%3E%3Cpath fill='%237EB101' d='M16.55 14.095 2.617.82a1.25 1.25 0 0 0-1.725 0L.877.835a1.15 1.15 0 0 0 0 1.667l13.12 12.5L.877 27.497a1.15 1.15 0 0 0 0 1.668l.015.015a1.25 1.25 0 0 0 1.725 0L16.55 15.905a1.251 1.251 0 0 0 0-1.81Z'/%3E%3C/svg%3E");
+
+
+
+}
+
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus { 
+       color: currentColor;
+    outline: 1px solid currentColor;
+    background:getColor('secondary-bg-color'); 
+}
+
+.slick-arrow:active {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+}
