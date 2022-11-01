@@ -53,15 +53,6 @@
 
 // MOBILE MENU
 
-.menu-cross {
-  position: absolute;
-  top: 4px;
-  right: 4px;
-
-  @extend %menu-btn;
-  fill: getColor('primary-text-color');
-}
-
 .backdrop-menu {
   @media screen and (min-width: $tablet) {
     display: none;
@@ -75,6 +66,7 @@
 
   transform: translateY(-109%);
   overflow: hidden;
+  z-index: 99;
 
   pointer-events: none;
   visibility: hidden;
@@ -92,6 +84,15 @@
     visibility: visible;
     opacity: 1;
   }
+}
+
+.menu-cross {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+
+  @extend %menu-btn;
+  fill: getColor('primary-text-color');
 }
 
 .mobile-menu {
