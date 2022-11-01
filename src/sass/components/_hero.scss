@@ -97,18 +97,23 @@ transition: background-color 250ms  cubic-bezier(0.4, 0, 0.2, 1);
     margin: 0;
 }
 .slide__box {
-    
+        display: none;
         width: 336px;
         height:320px;
         overflow: hidden;
         border-radius: 50%;
 
  @media screen and (min-width: $tablet) and (max-width: $desktop){
+    
             position: absolute;
             right: 40px;
             top: 85px;
 
 }      
+
+ @media screen and (min-width: $tablet){
+    display: block;
+ }
         
 @media screen and (min-width: $desktop){
             width: 608px;
