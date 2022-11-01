@@ -57,6 +57,7 @@
 }
 
 .subscribe-form {
+    
     @media screen and (min-width: $tablet) {
         display: flex;
     }
@@ -68,6 +69,7 @@
     border: 0.85px solid getColor('border-input-color');
     border-radius: 30px;
     background-color: transparent;
+    
 
     &:focus {
         outline: 0;
@@ -124,4 +126,31 @@
     }
 
     transition: background-color $transition-duration $timing-function;
+}
+
+
+// input-error
+
+.subscribe-form__error {
+    color: getColor('border-error-color');
+    text-align: left;
+    font-size: 10px;
+    margin-top: 3px;
+    display: none;
+    position: absolute;
+    
+    
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: getColor('border-error-color'); 
+}
+
+input:invalid:not(:placeholder-shown)+.subscribe-form__error {
+    display: flex;
+    align-items: center;
+}
+
+.subscribe-form__error-text{
+    margin-left: 4px;
 }
