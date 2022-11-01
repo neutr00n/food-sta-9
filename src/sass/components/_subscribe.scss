@@ -156,7 +156,6 @@
 
 .input-error {
   position: absolute;
-  display: inline-flex;
 
   top: 50px;
   left: 0;
@@ -178,7 +177,8 @@
 }
 
 .subscribe-form__input:invalid:not(:placeholder-shown) + .input-error {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
 }
 
 .subscribe-form__input:valid:not(:placeholder-shown) {
