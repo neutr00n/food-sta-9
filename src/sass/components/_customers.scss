@@ -1,0 +1,163 @@
+.comments {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-size: cover;
+
+    @media screen and (min-width: 768px) {
+        padding-bottom: 120px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding-top: 100px;
+        padding-bottom: 200px;
+    }
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media screen and (min-width: 320px) {
+        background-image: url('../images/customers/customers-background-mob_1x.png');
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/customers/customers-background-mob_2x.png');
+        }
+
+        @media (min-device-pixel-ratio: 3),
+        (min-resolution: 288dpi),
+        (min-resolution: 3dppx) {
+            background-image: url('../images/customers/customers-background-mob_3x.png');
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        background-size: contain;
+        background-image: url('../images/customers/customers-background-tab_1x.png');
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/customers/customers-background-tab_2x.png');
+        }
+
+        @media (min-device-pixel-ratio: 3),
+        (min-resolution: 288dpi),
+        (min-resolution: 3dppx) {
+            background-image: url('../images/customers/customers-background-tab_3x.png');
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        background-image: url('../images/customers/customers-background-desk_1x.png');
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/customers/customers-background-desk_2x.png');
+        }
+
+        @media (min-device-pixel-ratio: 3),
+        (min-resolution: 288dpi),
+        (min-resolution: 3dppx) {
+            background-image: url('../images/customers/customers-background-desk_3x.png');
+        }
+    }
+}
+
+.comments__title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+
+    @media screen and (min-width: 768px) {
+        font-size: 42px;
+        line-height: 1.17;
+    }
+}
+
+.comments__description {
+    margin-bottom: 32px;
+    line-height: 1.14;
+
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+        line-height: 1.19;
+    }
+}
+
+.comments__list {
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
+}
+
+.comments__item {
+    background-color: getColor(secondary-bg-color);
+    padding: 8px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    @media screen and (min-width: 768px) {
+        width: 336px;
+        height: 244px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 501px;
+        height: 227px;
+    }
+}
+
+.comments__item:first-child {
+    margin-bottom: 24px;
+
+    @media screen and (min-width: 768px) {
+        margin-right: 32px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        margin-right: 139px;
+    }
+}
+
+.comments__icon {
+    margin-bottom: 28px;
+}
+
+.comments__text {
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.19;
+
+    @media screen and (min-width: 768px) {
+        font-size: 18px;
+        line-height: 1.17;
+    }
+}
+
+.writer__list {
+    display: flex;
+}
+
+.users__list {
+    border-right: 1px solid getColor(border-color);
+    padding-right: 14px;
+}
+
+.writer__image {
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.users__text--medium {
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.users__text {
+    line-height: 1.5;
+}
