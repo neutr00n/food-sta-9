@@ -13,14 +13,14 @@
     margin-bottom: 60px;
 }
 
-.favorites__cards{
+.favorites-list{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 28px;
 }
 
-.favorites__cards-item {
+.favorites-list__item {
         width: 280px;
         height: 282px;
     
@@ -47,12 +47,12 @@
 }
 
 
-.favorites__cards-item--mobile{
+.avorites-list__item--mob-hidden{
     @media screen and (max-width: $tablet) {
         display: none;
       }
 }
 
-.favorites__cards-item--image{
+.favorites-list__item--image{
     height: fit-content;
 }
