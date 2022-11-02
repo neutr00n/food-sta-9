@@ -37,7 +37,7 @@
   background-color: rgba(94, 99, 99, 0.7);
   opacity: 1;
 
-  transition: opacity 250ms linear;
+  transition: opacity $transition-duration $timing-function;
 }
 
 // Модалка
@@ -45,8 +45,6 @@
     position:absolute;
     top:60px;
     left:50%;
-
-    visibility: visible;
 
     min-width: 320px;
 
@@ -59,7 +57,7 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
 
     transform: translateX(-50%) scale(1);
-    transition: transform 250ms linear;
+    transition: opacity $transition-duration $timing-function;
 
     @media screen and (min-width: $tablet) {
       top:98px;
@@ -94,14 +92,17 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.06));
     
     cursor: pointer;
-    outline: none;
+
+    transition-property: fill, outline;
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
 
     &:hover, &:focus {
       fill: getColor('btn-border-accent-color');
     }
 
     &:focus {
-      border: 1px solid getColor('btn-border-accent-color');;
+      outline: 1px solid getColor('btn-border-accent-color');;
     }
   }
 
@@ -147,6 +148,10 @@
 
     outline: none;
 
+    transition-property: border-color, box-shadow, border;
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
+
     // Placeholder
     &::placeholder {
         line-height: 1.25;
@@ -154,11 +159,12 @@
       }
     
     // Валідність
-    &:focus:invalid {
-      border: 2px solid getColor('border-error-color');
-    }
+    &:not(:placeholder-shown):required:invalid {
+      border-color: getColor('border-error-color');
+      }
+
     &:valid {
-      border: 2px solid getColor('border-color');
+      border-color: getColor('border-color');
     }
 
     // Ховеры, фокусы
@@ -183,19 +189,14 @@
     border: 2px solid getColor('border-color');
     
     cursor: pointer;
+
     outline: none;
+
+    transition-property: border-color;
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
 
     &:hover, &:focus {
       border-color: getColor('btn-border-accent-color');
     }
   }
-
-  // Анимация
-.button,
-.input
-{
-  transition-property: 
-  color, fill, background-color, border-color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
