@@ -9,17 +9,45 @@
       <ul class="list order-form__list">
         <li class="order-form__field">
           <label class="order-form__label" for="name">Name</label>
-          <input class="input order-form__input" type="text" name="name" id="name" placeholder="Your name" required minlength="3" maxlength="25">
+          <div class="input-wrapper">
+            <input class="input order-form__input" type="text" name="name" id="name" placeholder="Your name" required minlength="3" maxlength="25">
+            <span class="input-error">
+              <svg class="input-error__icon" width="12" height="12">
+                <use href="./images/sprite.svg#icon-warning"></use>
+              </svg>
+              <span class="input-error__text"
+                >The name must be between 3 and 25 characters
+              </span>
+          </div>
         </li>
         <li class="order-form__field">
           <label class="order-form__label" for="tel">Phone number</label>
-          <input class="input order-form__input" type="tel" name="tel" id="tel" placeholder="+38(0_ _) _ _ _   _ _   _ _" required 
-          pattern="[0]{1}[0-9]{9}"
-          title="This phone must be in the format  099 000 00 00">
+          <div class="input-wrapper">
+            <input class="input order-form__input" type="tel" name="tel" id="tel" placeholder="+38(0_ _) _ _ _   _ _   _ _" required
+            pattern="[0]{1}[0-9]{9}"
+            title="This phone must be in the format  099 000 00 00">
+            <span class="input-error">
+              <svg class="input-error__icon" width="12" height="12">
+                <use href="./images/sprite.svg#icon-warning"></use>
+              </svg>
+              <span class="input-error__text"
+                >This phone must be in the format 099 000 00 00
+              </span>
+          </div>
         </li>
         <li class="order-form__field">
           <label class="order-form__label" for="mail">E-mail</label>
-          <input class="input order-form__input" type="email" name="mail" id="mail" placeholder="example@gmail.com" required>
+          <div class="input-wrapper">
+            <input class="input order-form__input" type="email" name="mail" id="mail" placeholder="example@gmail.com" required>
+            <span class="input-error">
+              <svg class="input-error__icon" width="12" height="12">
+                <use href="./images/sprite.svg#icon-warning"></use>
+              </svg>
+              <span class="input-error__text"
+                >Please enter a valid email address
+              </span>
+            </span>
+          </div>
         </li>
       </ul>
   

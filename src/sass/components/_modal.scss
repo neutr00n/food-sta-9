@@ -106,10 +106,7 @@
     }
   }
 
-
-//   Order Form
-
-.modal__title {
+  .modal__title {
     display: block;
     text-align: center;
 
@@ -118,6 +115,8 @@
     line-height: 1.2;
     font-size: 24px;
   }
+
+//   Order Form
 
   .order-form__list {
     margin-bottom: $indent;
@@ -135,6 +134,8 @@
     font-weight: 500;
     line-height: 1.4;
   }
+
+  // Input
   .order-form__input {
     padding: 14px 12px;
     
@@ -172,7 +173,37 @@
       border-color:getColor('btn-border-accent-color');
     }
   }
-  
+
+  // input-error
+.input-wrapper {
+  position: relative;
+}
+
+.input-error {
+  position: absolute;
+
+  top: 48px;
+  left: 12px;
+
+  font-size: 13px;
+  text-align: left;
+  line-height: 1.4;
+
+  display: none;
+
+  color: getColor('border-error-color');
+}
+
+.order-form__input:invalid:not(:placeholder-shown) {
+  border-color: getColor('border-error-color');
+}
+
+.order-form__input:invalid:not(:placeholder-shown) + .input-error {
+  display: flex;
+  align-items: center;
+}
+
+// Button
   .order-form__submit-button {
     display: block;
     
