@@ -95,7 +95,8 @@
   border-radius: 50%;
 
   &:hover,
-  &focus {
+  &:focus,
+  &:active {
     border-color: getColor('link-accent-color');
   }
 
