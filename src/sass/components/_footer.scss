@@ -93,7 +93,7 @@
         padding-top: 40;
     }
 
-    @media screen and (min-width: $desktop) {}
+    
 }
 
 .footer__logo {
@@ -114,7 +114,7 @@
 }
 
 
-.footer__list-services {
+.footer__list--services {
     display: flex;
 
     flex-direction: column;
@@ -137,13 +137,13 @@
 
 
 
-.footer__item-link {
+.footer__item--link {
     color: getColor('primary-text-color');
     line-height: calc(16 / 14);
 }
 
 
-.footer__item-service {
+.footer__item--service {
     display: block;
     font-size: 14px;
 
@@ -153,7 +153,7 @@
 }
 
 
-.footer__form-title {
+.footer__subscribtion--title {
     color: getColor('primary-text-color');
     margin-bottom: 12;
     font-size: 14px;
@@ -192,7 +192,7 @@
 }
 
 
-.subscription__input {
+.footer__input--subscription {
     border-radius: 30px;
     width: 100%;
     padding-top: 12;
@@ -241,7 +241,7 @@
     padding-left: 13px;
 }
 
-.button--subscription {
+.footer__input--button {
     display: block;
     margin-left: auto;
     box-sizing: border-box;
@@ -272,29 +272,19 @@
 
 }
 
-.subscribe-form__error {
-    margin-top: -20;
 
-    @media screen and (min-width: $tablet) {
-        margin-top: 0;
-    }
-
-    @media screen and (min-width: $desktop) {}
-}
-
-
-.button--subscription:hover,
-.button--subscription:focus {
+.footer__input--button:hover,
+.footer__input--button:focus {
     background: getColor('border-input-color');
     border: 0.854167px solid getColor('border-color');
 }
 
-.button--subscription:active {
+.footer__input--button:active {
     background: getColor('border-input-color');
     border: 0.854167px solid getColor('border-color');
 }
 
-.form__text {
+.footer__help--text {
     display: block;
     font-size: 10px;
     line-height: calc(14 / 12);
@@ -315,7 +305,7 @@
 
 
 
-.footer__subscribtion-link {
+.footer__help--link {
     color: getColor('border-color');
     font-style: normal;
     font-weight: 400;
@@ -323,27 +313,33 @@
     line-height: calc(14 / 12);
 }
 
-.footer__subscribtion-link:hover,
+.footer__help-link:hover,
 .footer__rule-link:hover,
 .footer__item-link:hover,
 .footer__logo:hover,
-.footer__subscribtion-link:focus,
+.footer__help-link:focus,
 .footer__rule-link:focus,
 .footer__item-link:focus,
 .footer__logo:focus {
     cursor: pointer;
     color: getColor('border-color');
 }
-.input-error {
-    position: absolute;
 
-    top: 50px;
+    
+.footer__input{
+    position: relative;
+}
+
+.input__error {
+    position: absolute;
+top: 40px;
     left: 0;
+    display: none;
 
     font-size: 10px;
-    text-align: left;
+    
 
-    display: none;
+    
 
     color: getColor('border-error-color');
 
@@ -351,16 +347,17 @@
         margin-left: 4px;
     }
 }
-.subscription__input:invalid:not(:placeholder-shown) {
+.footer__input--subscription:invalid:not(:placeholder-shown) {
+    
     border-color: getColor('border-error-color');
 }
 
-.subscription__input:invalid:not(:placeholder-shown)+.input-error {
+.footer__input--subscription:invalid:not(:placeholder-shown)+.input__error {
     display: flex;
     align-items: center;
 }
 
-.subscription__input:valid:not(:placeholder-shown) {
+.footer__input--subscription:valid:not(:placeholder-shown) {
     border-color: getColor('border-color');
 }
 
@@ -393,7 +390,7 @@
 }
 
 
-.footer__list-rules {
+.footer__rules--list {
 
     display: flex;
 
@@ -454,7 +451,7 @@
 }
 
 
-.footer__text {
+.footer__rules--text {
     display: flex;
     font-style: normal;
     justify-content: center;
