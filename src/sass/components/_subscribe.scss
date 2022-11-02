@@ -1,156 +1,186 @@
 .subscribe__section {
-    padding-bottom: 60px;
-    box-shadow: inset 0px -40px 13px -31px rgba(245, 245, 245, 1);
-    
-    @media screen and (min-width: $tablet) {
-        padding-bottom: 100px;
-    }
+  padding-bottom: 60px;
 
-    @media screen and (min-width: $desktop) {
-        padding-bottom: 64px;
-    }
+  box-shadow: inset 0px -40px 13px -31px rgba(245, 245, 245, 1);
+
+  @media screen and (min-width: 480px) {
+    margin: 0 auto;
+
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-bottom: 100px;
+    margin: 0 auto;
+
+    width: 768px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 64px;
+    margin: 0 auto;
+
+    width: 1280px;
+  }
 }
 
 .subscribe__container {
-    @media screen and (min-width: $desktop) {
-            display: flex;
-            flex-direction: row-reverse;
-            align-items: center;
-        }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
 }
 
-
 .subscribe-picture {
-    display: flex;
+  display: flex;
 
-    @media screen and (max-width: $tablet) {
-        justify-content: center;
-        margin-bottom: 17px;
-    }
+  @media screen and (max-width: $tablet) {
+    justify-content: center;
 
-    @media screen and (min-width: $tablet) and (max-width: $tablet-max) {
-        justify-content: flex-end;
-        margin-bottom: 20px;
-    }
+    margin-bottom: 17px;
+  }
 
-    @media screen and (min-width: $desktop) {
-        min-width: 608px;
-    }
+  @media screen and (min-width: $tablet) and (max-width: $tablet-max) {
+    justify-content: flex-end;
+
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    min-width: 608px;
+  }
 }
 
 .subscribe__title {
-    margin-bottom: 20px;
-    font-weight: 700;
-    
+  margin-bottom: 20px;
+  font-weight: 700;
 }
 
 .subscribe__text {
-    margin-bottom: 40px;
-    font-size: 14px;
-    line-height: 1.14;
+  margin-bottom: 40px;
 
-    @media screen and (min-width: $tablet) {
-        margin-bottom: 24px;
-        font-size: 16px;
-        line-height: 1.5;
-    }
+  font-size: 14px;
+  line-height: 1.14;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 24px;
+
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
 .subscribe-form {
-    
-    @media screen and (min-width: $tablet) {
-        display: flex;
-    }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .subscribe-form__input {
-    padding: 12px 11px;
-    width: 100%;
-    border: 0.85px solid getColor('border-input-color');
-    border-radius: 30px;
-    background-color: transparent;
-    
+  padding: 12px 11px;
 
-    &:focus {
-        outline: 0;
-        outline-offset: 0;
-        border-color: getColor('border-color');
-    }
+  width: 100%;
 
-    &::placeholder {
-        font-size: 12px;
-        line-height: 1.5;
-        color: getColor('placeholder-modal-text-color');
-    }
+  border: 0.85px solid getColor('border-input-color');
+  border-radius: 30px;
+  background-color: transparent;
 
-    @media screen and (max-width: $mobile-max) {
-        margin-bottom: 20px;
-    }
+  &:focus {
+    outline: 0;
+    outline-offset: 0;
+    border-color: getColor('border-color');
+  }
 
-    @media screen and (min-width: $tablet) {
-        min-width: 394px;
-    }
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.5;
 
-    transition: border-color $transition-duration $timing-function;
+    color: getColor('placeholder-modal-text-color');
+  }
+
+  @media screen and (max-width: $mobile-max) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    min-width: 394px;
+  }
+
+  transition: border-color $transition-duration $timing-function;
 }
 
 .subscribe-form__btn {
-    padding: 11px 22px;
-    border: none;
-    border-radius: 30px;
-    background-color:getColor('link-accent-color');
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 1.5;
-    color: getColor('primary-text-color');
+  padding: 11px 22px;
 
-    &:hover,
-    &:focus {
-        background-color: getColor('btn-bg-accent-color');
-    }
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
 
-    @media screen and (max-width: $mobile-max) {
-        display: block;
-        margin-left: auto;
-    }
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
 
-    @media screen and (min-width: $tablet) {
-        display: block;
-        margin-left: 22px;
-        height: 100%;
-    }
+  color: getColor('primary-text-color');
+  background-color: getColor('link-accent-color');
 
-    @media screen and (min-width: $desktop) {
-        margin-left: 32px;
-    }
+  &:hover,
+  &:focus {
+    background-color: getColor('btn-bg-accent-color');
+  }
 
-    transition: background-color $transition-duration $timing-function;
+  @media screen and (max-width: $mobile-max) {
+    display: block;
+
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+
+    margin-left: 22px;
+
+    height: 100%;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 32px;
+  }
+
+  transition: background-color $transition-duration $timing-function;
 }
-
 
 // input-error
-
-.subscribe-form__error {
-    color: getColor('border-error-color');
-    text-align: left;
-    font-size: 10px;
-    margin-top: 3px;
-    display: none;
-    position: absolute;
-    
-    
+.input-wrapper {
+  position: relative;
 }
 
-input:invalid:not(:placeholder-shown) {
-    border-color: getColor('border-error-color'); 
-}
+.input-error {
+  position: absolute;
 
-input:invalid:not(:placeholder-shown)+.subscribe-form__error {
-    display: flex;
-    align-items: center;
-}
+  top: 50px;
+  left: 0;
 
-.subscribe-form__error-text{
+  font-size: 10px;
+  text-align: left;
+
+  display: none;
+
+  color: getColor('border-error-color');
+
+  &__text {
     margin-left: 4px;
+  }
+}
+
+.subscribe-form__input:invalid:not(:placeholder-shown) {
+  border-color: getColor('border-error-color');
+}
+
+.subscribe-form__input:invalid:not(:placeholder-shown) + .input-error {
+  display: flex;
+  align-items: center;
+}
+
+.subscribe-form__input:valid:not(:placeholder-shown) {
+  border-color: getColor('border-color');
 }
