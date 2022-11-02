@@ -1,6 +1,6 @@
 .favorites{
-    margin-top: 100px;
-    margin-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .favorites__title{
@@ -48,7 +48,7 @@
 
 
 .avorites-list__item--mob-hidden{
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: $mobile-max) {
         display: none;
       }
 }
