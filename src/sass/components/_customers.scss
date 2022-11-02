@@ -1,9 +1,9 @@
-.customers {
+.customers__container {
     padding-top: 60px;
     padding-bottom: 60px;
 
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: cover;
     @media screen and (min-width: $tablet) {
         padding-bottom: 120px;
     }
@@ -63,7 +63,7 @@
 
     @media screen and (min-width: $tablet) {
         background-size: 768px 544px;
-        
+
         background-image: url('../images/customers/customers-background-tab_1x.png');
 
         @media (min-device-pixel-ratio: 2),
@@ -81,7 +81,7 @@
 
     @media screen and (min-width: $desktop) {
         background-size: 1280px 647px;
-        
+
         background-image: url('../images/customers/customers-background-desk_1x.png');
 
         @media (min-device-pixel-ratio: 2),
@@ -186,7 +186,7 @@
     border-right: 1px solid getColor(border-color);
 }
 
-.customers__image {
+.customer__image {
     margin-right: 16px;
 
     border-radius: 50%;
