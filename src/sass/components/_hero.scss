@@ -1,6 +1,14 @@
 .hero{
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
+
+    @media screen and (min-width: $tablet) {
+         margin-bottom: -35px;
+    }
+    
+    @media screen and (min-width: $desktop) {
+        margin-bottom: -155px;
+    }
 
 &__text{
    margin-top: 28px;
