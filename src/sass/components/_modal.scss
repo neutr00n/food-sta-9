@@ -31,13 +31,20 @@
   top:0%;
   left:0%;
 
+  pointer-events: initial;
+  opacity: 1;
+  visibility: visible;
+
+  z-index: 999;
+
   width: 100%;
   height: 100%;
   
   background-color: rgba(94, 99, 99, 0.7);
   opacity: 1;
 
-  transition: opacity $transition-duration $timing-function;
+  
+  transition: opacity $transition-duration $timing-function, visibility $transition-duration $timing-function;
 }
 
 // Модалка
@@ -46,9 +53,10 @@
     top:60px;
     left:50%;
 
-    min-width: 320px;
-
     padding: $indent 20px;
+
+    width: 320px;
+    height: 449px;
 
     background-color: getColor('border-input-color');
     
@@ -57,19 +65,18 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
 
     transform: translateX(-50%) scale(1);
-    transition: opacity $transition-duration $timing-function;
+    transition: transform $transition-duration $timing-function;
 
     @media screen and (min-width: $tablet) {
       top:98px;
+      
+      padding: $indent;
+      
+      width: 458px;
     }
     
     @media screen and (min-width: $desktop) {
       top:129px;
-    }
-
-    @media screen and (min-width: $tablet) {
-      padding: $indent;
-      min-width: 458px;
     }
   }
 
@@ -107,7 +114,6 @@
   }
 
   .modal__title {
-    display: block;
     text-align: center;
 
     margin-bottom: 20px;
@@ -132,6 +138,7 @@
     margin-bottom: 2px;
 
     font-weight: 500;
+    font-size: 16px;
     line-height: 1.4;
   }
 
@@ -143,18 +150,17 @@
     height: 48px;
 
     border-radius: 30px;
-    border: 1px solid getColor('border-input-color');
+    border: 2px solid getColor('border-input-color');
 
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
 
     outline: none;
 
-    transition-property: border-color, box-shadow, border;
-    transition-duration: $transition-duration;
-    transition-timing-function: $timing-function;
-
+    transition: border-color $transition-duration $timing-function;
+    
     // Placeholder
     &::placeholder {
+        font-size: 16px;
         line-height: 1.25;
         color: #c4c4c4;
       }
@@ -164,34 +170,34 @@
       border-color: getColor('border-error-color');
       }
 
-    &:valid {
-      border-color: getColor('border-color');
-    }
-
     // Ховеры, фокусы
     &:hover, &:focus {
-      border-color:getColor('btn-border-accent-color');
+      outline: 1px solid getColor('btn-border-accent-color');
     }
   }
 
   // input-error
-.input-wrapper {
+.order-form__label {
   position: relative;
 }
 
 .input-error {
   position: absolute;
+  display: none;
 
   top: 48px;
   left: 12px;
 
-  font-size: 13px;
+  font-weight: 500;
+  font-size: 11px;
   text-align: left;
   line-height: 1.4;
 
-  display: none;
-
   color: getColor('border-error-color');
+
+  @media screen and (min-width: $desktop) {
+    font-size: 13px;
+  }
 }
 
 .order-form__input:invalid:not(:placeholder-shown) {
@@ -205,14 +211,19 @@
 
 // Button
   .order-form__submit-button {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
     margin: 0 auto;
     padding: 10px 38px;
 
+    width: 106px;
+    height: 40px;
+
     font-weight: 500;
     font-size: 13px;
-    line-height: 1.54;
+    line-height: 1.5;
 
     background: getColor('secondary-bg-color');
     
@@ -221,13 +232,11 @@
     
     cursor: pointer;
 
-    outline: none;
-
-    transition-property: border-color;
+    transition-property: background-color;
     transition-duration: $transition-duration;
     transition-timing-function: $timing-function;
 
     &:hover, &:focus {
-      border-color: getColor('btn-border-accent-color');
+      background-color: getColor('link-accent-color');
     }
   }
