@@ -1,9 +1,22 @@
+.customers {
+    margin-bottom: -70px;
+
+    @media screen and (min-width:$tablet) {
+        margin-bottom: -86px;
+    }
+
+    @media screen and (min-width:$desktop) {
+        margin-bottom: -80px;
+    }
+}
+
 .customers__container {
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 100px;
 
     background-repeat: no-repeat;
-    background-position: cover;
+    background-position: center;
+    background-size: cover;
     @media screen and (min-width: $tablet) {
         padding-bottom: 120px;
     }
@@ -112,11 +125,13 @@
 }
 
 .customers__description {
-    margin-bottom: 32px;
+    margin-bottom: 28px;
 
     line-height: 1.14;
 
     @media screen and (min-width: $tablet) {
+        margin-bottom: 32px;
+        
         font-size: 16px;
         line-height: 1.19;
     }
