@@ -1,6 +1,14 @@
 .hero{
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
+
+    @media screen and (min-width: $tablet) {
+         margin-bottom: -35px;
+    }
+    
+    @media screen and (min-width: $desktop) {
+        margin-bottom: -155px;
+    }
 
 &__text{
    margin-top: 28px;
@@ -51,7 +59,7 @@
     }
     }
     
-    @media screen and (min-width: $tablet) and (max-width: $desktop)
+    @media screen and (min-width: $tablet) and (max-width: $tablet-max)
     {
         .hero__title 
         {width: 537px;}
@@ -103,7 +111,7 @@ transition: background-color 250ms  cubic-bezier(0.4, 0, 0.2, 1);
         overflow: hidden;
         border-radius: 50%;
 
- @media screen and (min-width: $tablet) and (max-width: $desktop){
+ @media screen and (min-width: $tablet) and (max-width: $tablet-max){
     
             position: absolute;
             right: 40px;
