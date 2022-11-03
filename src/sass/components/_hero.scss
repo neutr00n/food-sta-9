@@ -113,6 +113,11 @@ transition: background-color $transition-duration  $timing-function;
         height:320px;
         overflow: hidden;
         border-radius: 50%;
+        
+        
+        
+            
+   
 
  @media screen and (min-width: $tablet) and (max-width: $tablet-max){
     
@@ -131,6 +136,7 @@ transition: background-color $transition-duration  $timing-function;
             height:580px;
             margin-top: 14px;
             margin-left: 32px;
+            
             
 
         }
@@ -288,17 +294,13 @@ transition: background-image $transition-duration  $timing-function;
 
 }
 
-.slick-prev:hover, .slick-next:hover { 
+.slick-prev:hover, .slick-next:hover, .slick-prev:focus, .slick-next:focus { 
        color: currentColor;
     outline:none;
     background:getColor('secondary-bg-color'); 
 }
 
-.slick-prev:focus, .slick-next:focus { 
-       color: currentColor;
-    outline: 1px solid currentColor;
-    background:getColor('secondary-bg-color'); 
-}
+
 
 .slick-arrow:active {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
