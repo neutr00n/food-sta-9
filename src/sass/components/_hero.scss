@@ -113,6 +113,7 @@ transition: background-color $transition-duration  $timing-function;
         height:320px;
         overflow: hidden;
         border-radius: 50%;
+        border: 14px solid getColor('border-input-color');
         
         
         
@@ -136,6 +137,7 @@ transition: background-color $transition-duration  $timing-function;
             height:580px;
             margin-top: 14px;
             margin-left: 32px;
+            border: 26px solid getColor('border-input-color');
             
             
 
@@ -153,15 +155,12 @@ transition: background-color $transition-duration  $timing-function;
 
 
 .slide__picture{
-    border-radius: 50%;
-    border: 14px solid getColor('border-input-color');
+    
+   
     margin-left: auto;
     margin-right: auto;
 
-    @media screen and (min-width: $desktop){
-        border: 26px solid getColor('border-input-color');
 
-    }
 
 }
 
@@ -237,16 +236,14 @@ transition: background-image $transition-duration  $timing-function;
 }
 
 .slick-next {
+
    right:0;
-    transform: translate(-2% , -50%);
+    transform: translate(75% , -50%);
     z-index: 1;
    @media screen and (min-width: $desktop){
-    transform: translate(-20% , -50%);
-
-    
+    transform: translate(85% , -50%);
+   }
 }
-}
-
 .slick-next:before{
    content: '';
    
