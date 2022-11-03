@@ -1,333 +1,278 @@
 .footer__container {
-    
-
-    background-image: url('../images/footer/footer-background-mob_1x.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100% ;
-padding: 60px 20px;
-
-
+  background-image: url('../images/footer/footer-background-mob_1x.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  padding: 60px 20px;
 }
 
-
 @media screen and (min-width: $tablet) {
-    .footer__container {
+  .footer__container {
+    background-image: url('../images/footer/footer-background-tab_1x.jpg');
 
-
-        background-image: url('../images/footer/footer-background-tab_1x.jpg');
-        
-padding: 100px 32px;
-    }
+    padding: 100px 32px;
+  }
 }
 
 @media screen and (min-width: $desktop) {
-    .footer__container {
+  .footer__container {
+    background-image: url('../images/footer/footer-background-desk_1x.jpg');
 
-
-        background-image: url('../images/footer/footer-background-desk_1x.jpg');
-        
-        background-position: bottom left 53px;
-            background-repeat: no-repeat;
-            background-size: 1211px 266px;
-        padding: 100px 16px;
-    }
+    background-position: bottom left 53px;
+    background-repeat: no-repeat;
+    background-size: 1211px 266px;
+    padding: 100px 16px;
+  }
 }
-
-
-
-
 
 /*------------ 1rst div  ------------*/
 
-
 .footer__menu {
-    display: flex;
+  display: flex;
 
-    align-items: center;
-    flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: wrap;
 
-    @media screen and (max-width: $mobile-max) {
-        
-        margin-top: 0;
-        justify-content: center;
+  @media screen and (max-width: $mobile-max) {
+    margin-top: 0;
+    justify-content: center;
+  }
 
+  @media screen and (min-width: $tablet) {
+    justify-content: space-between;
+  }
 
-    }
-
-    @media screen and (min-width: $tablet) {
-        
-        justify-content: space-between;
-
-    }
-
-    @media screen and (min-width: $desktop) {
-      
-         margin-top: 0;
-align-items: flex-start;
-        justify-content: space-between;
-    }
-
+  @media screen and (min-width: $desktop) {
+    margin-top: 0;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 }
-
-
-
 
 .footer__block {
-    display: flex;
-    
-    align-items: center;
-    
-    
+  display: flex;
 
-    @media screen and (max-width: $mobile-max) {
-        max-width: 440px;
+  align-items: center;
+
+  @media screen and (max-width: $mobile-max) {
+    max-width: 440px;
     width: 100%;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 40px;
-        
-        align-items: flex-start;
-        
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    align-items: flex-start;
+
     padding-right: 80px;
+  }
 
-    }
-
-    @media screen and (min-width: $tablet ) and (max-width: $tablet-max) {
-        
-        
-        margin-bottom: 40px;
-        
-    }
- @media screen and (min-width: $desktop) {
-
-    
-}
+  @media screen and (min-width: $tablet) and (max-width: $tablet-max) {
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: $desktop) {
+  }
 }
 /*------------ logo footer  ------------*/
 .footer__logo {
-    display: block;
-    
+  display: block;
 
-    @media screen and (min-width: $tablet) {
-        margin-right: 80px;
-        padding-bottom: 0;
+  @media screen and (min-width: $tablet) {
+    margin-right: 80px;
+    padding-bottom: 0;
+  }
 
-    }
-
-    @media screen and (min-width: $desktop) {
-        margin-right: 148px;
-        padding-bottom: 0;
-    }
+  @media screen and (min-width: $desktop) {
+    margin-right: 148px;
+    padding-bottom: 0;
+  }
 }
-
 
 .footer__list--services {
+  display: flex;
+
+  flex-direction: column;
+  gap: 20px;
+
+  @media screen and (min-width: $tablet) {
     display: flex;
+    gap: 39;
+    flex-direction: row;
+  }
 
-    flex-direction: column;
-    gap: 20px;
-    
-
-    @media screen and (min-width: $tablet) {
-        display: flex;
-        gap: 39;
-        flex-direction: row;
-
-    }
-
-    @media screen and (min-width: $desktop) {
-        display: flex;
-        gap: 39;
-        flex-direction: row;
-    }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    gap: 39;
+    flex-direction: row;
+  }
 }
-
-
 
 .footer__item--link {
-    color: getColor('primary-text-color');
-    line-height: calc(16 / 14);
-}
+  color: getColor('primary-text-color');
+  line-height: calc(16 / 14);
 
+  transition: color $transition-duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: getColor('link-accent-color');
+    text-decoration: underline;
+  }
+}
 
 .footer__item--service {
-    display: block;
-    font-size: 14px;
+  display: block;
+  font-size: 14px;
 
-    color: getColor('primary-text-color');
-    line-height: calc(16 / 14);
-
+  color: getColor('primary-text-color');
+  line-height: calc(16 / 14);
 }
 
-.footer__subscribtion{
-     margin-bottom: 60px;
-    @media screen and (min-width: $tablet) {
-        margin-bottom: 100px;
-    }
-@media screen and (min-width: $desktop) {
-margin-bottom: 0;
-}
+.footer__subscribtion {
+  margin-bottom: 60px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 100px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .footer__subscribtion--title {
-    color: getColor('primary-text-color');
-    margin-bottom: 12;
-    font-size: 14px;
-    
+  color: getColor('primary-text-color');
+  margin-bottom: 12;
+  font-size: 14px;
 
-    @media screen and (min-width: $tablet) {
-        display: flex;
-        
-        flex-direction: row;
-        
-    }
+  @media screen and (min-width: $tablet) {
+    display: flex;
 
-    @media screen and (min-width: $desktop) {
-        
-    }
+    flex-direction: row;
+  }
+
+  @media screen and (min-width: $desktop) {
+  }
 }
 
-
 .footer__help {
-    width: 100%;
+  width: 100%;
 
-    @media screen and (min-width: $desktop) {
-        width: auto;
-    }
+  @media screen and (min-width: $desktop) {
+    width: auto;
+  }
 }
 
 .footer__subscription-wrapper {
-    display: flex;
-    flex-direction: column;
-
+  display: flex;
+  flex-direction: column;
 }
 /*------------ input  ------------*/
 .footer__input {
-    max-width: 480px;
-    width: 100%;
+  max-width: 480px;
+  width: 100%;
 }
-
 
 .footer__input--subscription {
-    border-radius: 30px;
-    width: 100%;
-    padding-top: 12;
-    padding-bottom: 12;
-    background: getColor('primary-bg-color');
-    border: 0.854167px solid getColor('border-input-color');
+  border-radius: 30px;
+  width: 100%;
+  padding-top: 12;
+  padding-bottom: 12;
+  background: getColor('primary-bg-color');
+  border: 1px solid getColor('border-input-color');
+  font-size: 12px;
+  transition: background-color $transition-duration $timing-function;
+  padding-left: 12;
+
+  &:focus {
+    outline: 0;
+    outline-offset: 0;
+    border-color: getColor('border-color');
+  }
+
+  &::placeholder {
     font-size: 12px;
-    transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding-left: 12;
+    line-height: 1.5;
+    color: getColor('placeholder-modal-text-color');
+  }
 
-    &:focus {
-        outline: 0;
-        outline-offset: 0;
-        border-color: getColor('border-color');
-    }
+  @media screen and (max-width: $mobile-max) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
 
-    &::placeholder {
-        font-size: 12px;
-        line-height: 1.5;
-        color: getColor('placeholder-modal-text-color');
-    }
+  @media screen and (min-width: $tablet) {
+    display: inline;
+    width: 279px;
+  }
 
-    @media screen and (max-width: $mobile-max) {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 20px;
+  @media screen and (min-width: $desktop) {
+    display: inline;
+  }
 
-    }
-
-    @media screen and (min-width: $tablet) {
-        display: inline;
-        width: 279px;
-    }
-
-    @media screen and (min-width: $desktop) {
-        display: inline;
-
-
-    }
-
-    transition: border-color $transition-duration $timing-function;
+  transition: border-color $transition-duration $timing-function;
 }
 
-
-.input[type="email"] {
-    padding-left: 13px;
+.input[type='email'] {
+  padding-left: 13px;
 }
 /*------------  button ------------*/
 .footer__input--button {
+  display: block;
+  margin-left: auto;
+  box-sizing: border-box;
+  border-radius: 30px;
+  padding-top: 11;
+  padding-bottom: 11;
+  padding-right: 22;
+  padding-left: 22;
+  background: getColor('secondary-bg-color');
+  border: 0.854167px solid getColor('border-color');
+  font-size: 13px;
+  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: $mobile-max) {
     display: block;
     margin-left: auto;
-    box-sizing: border-box;
-    border-radius: 30px;
-    padding-top: 11;
-    padding-bottom: 11;
-    padding-right: 22;
-    padding-left: 22;
-    background: getColor('secondary-bg-color');
-    border: 0.854167px solid getColor('border-color');
-    font-size: 13px;
-    transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-    @media screen and (min-width: $mobile-max) {
-
-
-        display: block;
-        margin-left: auto;
-
-    }
-
-    @media screen and (min-width: $tablet) {
-
-        display: inline;
-        margin-left: 13;
-    }
-
-
+  @media screen and (min-width: $tablet) {
+    display: inline;
+    margin-left: 13;
+  }
 }
-
 
 .footer__input--button:hover,
 .footer__input--button:focus {
-    background: getColor('border-input-color');
-    border: 0.854167px solid getColor('border-color');
+  background: getColor('border-input-color');
+  border: 0.854167px solid getColor('border-color');
 }
 
 .footer__input--button:active {
-    background: getColor('border-input-color');
-    border: 0.854167px solid getColor('border-color');
+  background: getColor('border-input-color');
+  border: 0.854167px solid getColor('border-color');
 }
 
 .footer__help--text {
-    display: block;
-    font-size: 10px;
-    line-height: calc(14 / 12);
-    margin-top: 10;
+  display: block;
+  font-size: 10px;
+  line-height: calc(14 / 12);
+  margin-top: 10;
 
-    @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+    margin-top: 15px;
+  }
 
-        font-size: 12px;
-        margin-top: 15px;
-    }
-
-    @media screen and (min-width: $desktop) {
-
-        font-size: 12px;
-    }
+  @media screen and (min-width: $desktop) {
+    font-size: 12px;
+  }
 }
 
-
-
-
 .footer__help--link {
-    color: getColor('border-color');
-    font-style: normal;
-    font-weight: 400;
-    text-decoration-line: underline;
-    line-height: calc(14 / 12);
+  color: getColor('border-color');
+  font-style: normal;
+  font-weight: 400;
+  text-decoration-line: underline;
+  line-height: calc(14 / 12);
 }
 
 .footer__help-link:hover,
@@ -338,164 +283,132 @@ margin-bottom: 0;
 .footer__rule-link:focus,
 .footer__item-link:focus,
 .footer__logo:focus {
-    cursor: pointer;
-    color: getColor('border-color');
+  cursor: pointer;
+  color: getColor('border-color');
 }
 
-    
-.footer__input{
-    position: relative;
+.footer__input {
+  position: relative;
 }
 /*------------  error ------------*/
 .input__error {
-    position: absolute;
-top: 40px;
-    left: 0;
-    display: none;
+  position: absolute;
+  top: 44px;
+  left: 0;
+  display: none;
 
-    font-size: 10px;
-    
+  font-size: 10px;
 
-    
+  color: getColor('border-error-color');
 
-    color: getColor('border-error-color');
-
-    &__text {
-        margin-left: 4px;
-    }
+  &--text {
+    margin-left: 4px;
+  }
 }
 .footer__input--subscription:invalid:not(:placeholder-shown) {
-    
-    border-color: getColor('border-error-color');
+  border-color: getColor('border-error-color');
 }
 
-.footer__input--subscription:invalid:not(:placeholder-shown)+.input__error {
-    display: flex;
-    align-items: center;
+.footer__input--subscription:invalid:not(:placeholder-shown) + .input__error {
+  display: flex;
+  align-items: center;
 }
 
 .footer__input--subscription:valid:not(:placeholder-shown) {
-    border-color: getColor('border-color');
+  border-color: getColor('border-color');
 }
-
-
-/*------------ 1rst div end  ------------*/
-
-
-
-
-/*------------ 2nd div  ------------*/
-
 
 /*------------ rules BLOCK  ------------*/
 .footer__rules {
-    display: inline;
-    align-items: center;
+  display: inline;
+  align-items: center;
 
-    @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
 
-        display: flex;
-        justify-content: space-between;
-    }
-
-    @media screen and (min-width: $desktop) {
-
-        display: flex;
-         margin-top: 100;
-
-
-    }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    margin-top: 100;
+  }
 }
 
 /*------------  list with rules ------------*/
 .footer__rules--list {
+  display: flex;
+
+  justify-content: space-between;
+
+  @media screen and (max-width: $mobile-max) {
+    margin-top: 40px;
+    max-width: 440;
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 0;
 
     display: flex;
 
-    justify-content: space-between;
+    gap: 20;
+  }
 
-
-    @media screen and (max-width: $mobile-max) {
-
-        
-
-        margin-top: 40px;
-        max-width: 440;
-        width: 100%;
-
-
-        justify-content: space-between;
-    }
-
-    @media screen and (min-width: $tablet) {
-
-        margin-top: 0;
-        
-        display: flex;
-        
-        gap: 20;
-
-    }
-
-    @media screen and (min-width: $desktop) {
-        margin-top: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-    }
+  @media screen and (min-width: $desktop) {
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 /*------------  item from list (rules) ------------*/
 .footer__item-rule {
-    display: flex;
-    flex-wrap: nowrap;
-    color: getColor('border-color');
-    font-style: normal;
-    font-weight: 400;
-    text-decoration-line: underline;
-    font-size: 10px;
-    justify-content: space-between;
-    line-height: calc(14 / 12);
+  display: flex;
+  flex-wrap: nowrap;
+  color: getColor('border-color');
+  font-style: normal;
+  font-weight: 400;
+  text-decoration-line: underline;
+  font-size: 10px;
+  justify-content: space-between;
+  line-height: calc(14 / 12);
 
-    @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+  }
 
-        font-size: 12px;
-    }
-
-    @media screen and (min-width: $desktop) {
-
-        font-size: 12px;
-    }
+  @media screen and (min-width: $desktop) {
+    font-size: 12px;
+  }
 }
 
 /*------------  rule text  ------------*/
 .footer__rules--text {
+  display: flex;
+  font-style: normal;
+  justify-content: center;
+  margin-top: 40;
+
+  color: getColor('primary-text-color');
+  font-size: 10px;
+  line-height: calc(14 / 12);
+
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+    margin-top: 0;
+  }
+
+  @media screen and (min-width: $desktop) {
     display: flex;
-    font-style: normal;
-    justify-content: center;
-    margin-top: 40;
-    
-    color: getColor('primary-text-color');
-    font-size: 10px;
-    line-height: calc(14 / 12);
+    justify-content: space-between;
 
-    @media screen and (min-width: $tablet) {
-        font-size: 12px;
-        margin-top: 0;
-        
-
-
-    }
-
-    @media screen and (min-width: $desktop) {
-        display: flex;
-        justify-content: space-between;
-        
-        
-        font-size: 12px;
-    }
+    font-size: 12px;
+  }
 }
 
 /*------------ link footer  ------------*/
 .footer__rule-link {
-    color: getColor('border-color');
-    line-height: calc(14 / 12);
+  color: getColor('border-color');
+  line-height: calc(14 / 12);
 }
