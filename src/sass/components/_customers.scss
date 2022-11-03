@@ -1,18 +1,22 @@
 .customers {
-  margin-bottom: -70px;
+  margin-bottom: -40px;
+
+  @media screen and (min-width: 321px) {
+    margin-bottom: -65px;
+  }
 
   @media screen and (min-width: $tablet) {
-    margin-bottom: -86px;
+    margin-bottom: -75px;
   }
 
   @media screen and (min-width: $desktop) {
-    margin-bottom: -80px;
+    margin-bottom: -65px;
   }
 }
 
 .customers__container {
   padding-top: 60px;
-  padding-bottom: 100px;
+  padding-bottom: 60px;
 
   background-image: url('../images/customers/customers-background-mob_1x.png');
 
@@ -24,6 +28,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   @media screen and (min-width: $tablet) {
     padding-bottom: 120px;
   }
@@ -33,7 +38,8 @@
     padding-bottom: 200px;
   }
 
-  @media screen and (min-width: 320px) and (max-width: $mobile) {
+  @media screen and (min-width: 321px) and (max-width: $mobile-max) {
+    height: 769px;
     background-image: url('../images/customers/customers-background-mob-480_1x.png');
 
     @media (min-device-pixel-ratio: 2),
@@ -43,7 +49,6 @@
     }
   }
   @media screen and (min-width: $mobile) {
-    background-size: 480px 769px;
     background-image: url('../images/customers/customers-background-mob-480_1x.png');
 
     @media (min-device-pixel-ratio: 2),
@@ -54,8 +59,6 @@
   }
 
   @media screen and (min-width: $tablet) {
-    background-size: 768px 544px;
-
     background-image: url('../images/customers/customers-background-tab_1x.png');
 
     @media (min-device-pixel-ratio: 2),
@@ -66,8 +69,6 @@
   }
 
   @media screen and (min-width: $desktop) {
-    background-size: 1280px 647px;
-
     background-image: url('../images/customers/customers-background-desk_1x.png');
 
     @media (min-device-pixel-ratio: 2),
@@ -129,7 +130,9 @@
 }
 
 .customers__item:first-child {
-  margin-bottom: 24px;
+  @media screen and (max-width: $mobile-max) {
+    margin-bottom: 24px;
+  }
 
   @media screen and (min-width: $tablet) {
     margin-right: 32px;
