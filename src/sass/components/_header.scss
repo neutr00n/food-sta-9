@@ -18,6 +18,16 @@
   transition: fill $transition-duration $timing-function;
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+
+  background-color: getColor('primary-bg-color');
+}
+
 .header__container {
   position: relative;
   display: flex;
@@ -75,8 +85,8 @@
   background-color: rgb(49%, 69%, 0%, 0.2);
 
   transition: transform $transition-duration $timing-function,
-  visibility $transition-duration $timing-function,
-  opacity $transition-duration $timing-function;
+    visibility $transition-duration $timing-function,
+    opacity $transition-duration $timing-function;
 
   &.is-open {
     transform: translateY(0);
