@@ -288,7 +288,13 @@ transition: background-image $transition-duration  $timing-function;
 
 }
 
-.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus { 
+.slick-prev:hover, .slick-next:hover { 
+       color: currentColor;
+    outline:none;
+    background:getColor('secondary-bg-color'); 
+}
+
+.slick-prev:focus, .slick-next:focus { 
        color: currentColor;
     outline: 1px solid currentColor;
     background:getColor('secondary-bg-color'); 
