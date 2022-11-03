@@ -4,11 +4,25 @@
   background-position: center;
   background-size: 100% 100%;
   padding: 60px 20px;
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/footer/footer-background-mob_2x.jpg');
+  }
 }
 
 @media screen and (min-width: $tablet) {
   .footer__container {
     background-image: url('../images/footer/footer-background-tab_1x.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/footer/footer-background-tab_2x.jpg');
+    }
 
     padding: 100px 32px;
   }
@@ -17,6 +31,13 @@
 @media screen and (min-width: $desktop) {
   .footer__container {
     background-image: url('../images/footer/footer-background-desk_1x.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/footer/footer-background-desk_2x.jpg');
+    }
 
     background-position: bottom left 53px;
     background-repeat: no-repeat;
