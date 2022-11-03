@@ -12,12 +12,7 @@
         (min-resolution: 2dppx){
             background-image: url(../images/offerings/offerings-background-mob_2x.png);
         }
-    @media (min-device-pixel-ratio: 3),
-        (-webkit-min-device-pixel-ratio: 3),
-        (min-resolution: 288dpi),
-        (min-resolution: 3dppx){
-            background-image: url(../images/offerings/offerings-background-mob_3x.png);
-        }
+
 
     @media screen and (min-width:480px) {
     background-image: url(../images/offerings/offerings-background-mob-480_1x.png);
@@ -27,12 +22,7 @@
         (min-resolution: 2dppx) {
             background-image: url(../images/offerings/offerings-background-mob-480_2x.png);
         }
-        @media (min-device-pixel-ratio: 3),
-        (-webkit-min-device-pixel-ratio: 3),
-        (min-resolution: 288dpi),
-        (min-resolution: 3dppx) {
-            background-image: url(../images/offerings/offerings-background-mob-480_3x.png);
-        }
+
     }
 
     @media screen and (min-width:$tablet) {
@@ -46,12 +36,7 @@
                 background-image: url(../images/offerings/offerings-background-tab_2x.png);
             }
         
-            @media (min-device-pixel-ratio: 3),
-            (-webkit-min-device-pixel-ratio: 3),
-            (min-resolution: 288dpi),
-            (min-resolution: 3dppx) {
-                background-image: url(../images/offerings/offerings-background-tab_3x.png);
-            }
+
     }
 
     @media screen and (min-width:$desktop) {
@@ -69,12 +54,7 @@
                 background-image: url(../images/offerings/offerings-background-desk_2x.png);
             }
         
-            @media (min-device-pixel-ratio: 3),
-            (-webkit-min-device-pixel-ratio: 3),
-            (min-resolution: 288dpi),
-            (min-resolution: 3dppx) {
-                background-image: url(../images/offerings/offerings-background-desk_3x.png);
-            }
+
     }
 }
 
