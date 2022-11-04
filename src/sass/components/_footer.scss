@@ -259,6 +259,7 @@
   background: getColor('secondary-bg-color');
   border: 0.854167px solid getColor('border-color');
   font-size: 13px;
+  cursor: pointer;
   transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media screen and (min-width: $mobile-max) {
