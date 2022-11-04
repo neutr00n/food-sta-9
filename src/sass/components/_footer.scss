@@ -1,6 +1,6 @@
 .footer__container {
   background-image: url('../images/footer/footer-background-mob-top-apple_1x.jpg'), url('../images/footer/footer-background-mob-top-orange_1x.jpg'), url('../images/footer/footer-background-mob-bottom-apple_1x.jpg');
-  background-repeat: no-repeat, no-repeat;
+  background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: 0 111px, 100% 0, center bottom;
   // background-size: 100% 100%;
   padding: 60px 20px;
@@ -16,6 +16,9 @@
 @media screen and (min-width: $tablet) {
   .footer__container {
     background-image: url('../images/footer/footer-background-tab_1x.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
 
     @media (min-device-pixel-ratio: 2),
       (-webkit-min-device-pixel-ratio: 2),
