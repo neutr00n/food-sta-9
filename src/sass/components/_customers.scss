@@ -93,8 +93,9 @@
 }
 
 .customers__description {
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 
+  font-size: 14px;
   line-height: 1.14;
 
   @media screen and (min-width: $tablet) {
@@ -178,9 +179,11 @@
 
 .customers__name {
   font-weight: 500;
+  font-size: 14px;
   line-height: 1.5;
 }
 
 .customers__position {
+  font-size: 14px;
   line-height: 1.5;
 }

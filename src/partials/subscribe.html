@@ -1,35 +1,65 @@
 <section id="subscribe-section" class="subscribe__section">
   <div class="container subscribe__container">
     <picture class="subscribe-picture">
-      <source srcset="
+      <source
+        srcset="
           ./images/subscribe/banan-mob_1x.webp,
           ./images/subscribe/banan-mob_2x.webp 2x
-        " media="(max-width:767px)" width="280" type="image/webp" />
+        "
+        media="(max-width:767px)"
+        width="280"
+        type="image/webp"
+      />
 
-      <source srcset="
+      <source
+        srcset="
           ./images/subscribe/banan-mob_1x.png,
           ./images/subscribe/banan-mob_2x.png 2x
-        " media="(max-width:767px)" width="280" type="image/png" />
+        "
+        media="(max-width:767px)"
+        width="280"
+        type="image/png"
+      />
 
-      <source srcset="
+      <source
+        srcset="
           ./images/subscribe/banan-tab_1x.webp,
           ./images/subscribe/banan-tab_2x.webp 2x
-        " media="(min-width:768px) and (max-width:1279px)" width="281" type="image/webp" />
+        "
+        media="(min-width:768px) and (max-width:1279px)"
+        width="281"
+        type="image/webp"
+      />
 
-      <source srcset="
+      <source
+        srcset="
           ./images/subscribe/banan-tab_1x.png,
           ./images/subscribe/banan-tab_2x.png 2x
-        " media="(min-width:768px) and (max-width:1279px)" width="281" type="image/png" />
+        "
+        media="(min-width:768px) and (max-width:1279px)"
+        width="281"
+        type="image/png"
+      />
 
-      <source srcset="
+      <source
+        srcset="
           ./images/subscribe/banan-desk_1x.webp,
           ./images/subscribe/banan-desk_2x.webp 2x
-        " media="(min-width:1280px)" width="608" type="image/webp" />
+        "
+        media="(min-width:1280px)"
+        width="608"
+        type="image/webp"
+      />
 
-      <source srcset="
+      <source
+        srcset="
           ./images/subscribe/banan-desk_1x.png,
           ./images/subscribe/banan-desk_2x.png 2x
-        " media="(min-width:1280px)" width="608" type="image/png" />
+        "
+        media="(min-width:1280px)"
+        width="608"
+        type="image/png"
+      />
 
       <img src="./images/subscribe/banan-mob_1x.png" alt="Banan" width="608" />
     </picture>
@@ -47,12 +77,20 @@
       <form class="subscribe-form">
         <div class="input-wrapper">
           <label class="subscribe-form__label">
-            <input type="email" name="email" placeholder="Enter your email" class="subscribe-form__input" />
-            <span class="input-error">
-              <svg class="input-error__icon" width="12" height="12">
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              class="subscribe-form__input"
+            />
+
+            <span class="subscribe-input-error">
+              <svg class="subscribe-input-error__icon" width="12" height="12">
                 <use href="./images/sprite.svg#icon-warning"></use>
               </svg>
-              <span class="input-error__text">Not a valid email address (example@email.com)
+
+              <span class="subscribe-input-error__text"
+                >Not a valid email address (example@email.com)
               </span>
             </span>
           </label>

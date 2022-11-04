@@ -1,37 +1,69 @@
-.favorites{
+.favorites {
+  @media screen and (max-width: $tablet) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
-.favorites__title{
+.favorites__title {
   margin-bottom: 20px;
   text-align: center;
+
+  line-height: 1.17;
 }
 
-.favorites__text{
-  text-align: center;
+.favorites__text {
   margin-bottom: 60px;
+
+  text-align: center;
+
+  font-size: 14px;
+  line-height: 1.14;
+  @media screen and (min-width: $tablet) {
+    line-height: 1.19;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 40px;
+
+    font-size: 16px;
+  }
 }
 
-.favorites-list{
+.favorites-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 28px;
+  gap: 20px;
+
+  @media screen and (min-width: $tablet) {
+    gap: 32px;
+  }
 }
 
 .favorites-list__item {
-      width: 280px;
-      height: 282px;
+  width: 280px;
+  height: 282px;
 
-      @media screen and (min-width: $tablet) {
-      width: 336px;
-      height: 338px;
-    }
+  @media screen and (max-width: $mobile-max) {
+    border: 11px solid getColor('border-input-color');
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 32px) / 2);
+
+    width: 336px;
+    height: 338px;
+  }
+
   @media screen and (min-width: $desktop) {
-      width: 395px;
-      height: 397px;
-    }
+    flex-basis: calc((100% - 32px * 2) / 3);
+
+    width: 395px;
+    height: 397px;
+  }
 
   border-radius: 50%;
   border: 14px solid getColor('border-input-color');
@@ -40,19 +72,18 @@
   justify-content: center;
   align-items: center;
   &:hover,
-  &:focus{
-      border: 14px solid getColor('link-accent-color');
+  &:focus {
+    border: 14px solid getColor('link-accent-color');
   }
   transition: border $transition-duration $timing-function;
 }
 
-
-.avorites-list__item--mob-hidden{
+.avorites-list__item--mob-hidden {
   @media screen and (max-width: $mobile-max) {
-      display: none;
-    }
+    display: none;
+  }
 }
 
-.favorites-list__item--image{
+.favorites-list__item--image {
   height: fit-content;
 }
