@@ -10,6 +10,10 @@
         margin-bottom: -155px;
     }
 
+&__title {
+    line-height: 1.2;
+}
+
 &__text{
    margin-top: 28px;
 
@@ -40,6 +44,7 @@
     }
      &__title{
         font-size: 48px;
+        
     }
  }
 
@@ -161,11 +166,10 @@ transition: background-color $transition-duration  $timing-function;
 .slide__picture{
     margin-left: auto;
     margin-right: auto;
+    margin-top: -8px;
 }
 
-.slide__picture--app {
-  margin-top: -8px;
-}
+
 
 
 
