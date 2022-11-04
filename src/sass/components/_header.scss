@@ -163,6 +163,11 @@
 
   &__link {
     @include font(400, 14px, calc(16 / 14));
+
+    @media screen and (max-width: $tablet-max) {
+      color: getColor('secondary-text-color');
+    }
+
     color: getColor('primary-text-color');
 
     transition: color $transition-duration $timing-function,
