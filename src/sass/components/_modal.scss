@@ -5,31 +5,28 @@
   &:not(:last-child) {
     margin-right: $indent;
   }
+}
+// Нижній відступ крім останнього нащадка!
+@mixin bottom-indent($indent) {
+  &:not(:last-child) {
+    margin-bottom: $indent;
   }
- // Нижній відступ крім останнього нащадка!
-  @mixin bottom-indent($indent) {
-    &:not(:last-child) {
-      margin-bottom: $indent;
-    }
-    }
+}
 
 // Стилі для приховування модального вікна
 .backdrop.is-hidden {
   visibility: hidden;
-  
+
   opacity: 0;
-  
+
   pointer-events: none;
-}
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0);
 }
 
 // Бэкдроп
 .backdrop {
   position: fixed;
-  top:0%;
-  left:0%;
+  top: 0%;
+  left: 0%;
 
   pointer-events: initial;
   opacity: 1;
@@ -39,9 +36,10 @@
 
   width: 100%;
   height: 100%;
-  
+
   background-color: rgba(94, 99, 99, 0.7);
-  opacity: 1;
+
+  overflow-y: scroll;
 
   transition-property: opacity, visibility;
   transition-duration: $transition-duration;
@@ -50,131 +48,138 @@
 
 // Модалка
 .modal {
-    position:absolute;
-    top:60px;
-    left:50%;
+  position: absolute;
+  top: 60px;
+  left: 50%;
 
-    padding: $indent 20px;
+  padding: 32px 20px;
 
-    width: 320px;
-    height: 449px;
+  width: 320px;
+  height: 449px;
 
-    background-color: getColor('border-input-color');
-    
-    border-radius: 30px;
+  background-color: getColor('border-input-color');
 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 30px;
 
-    transform: translateX(-50%) scale(1);
-    
-    transition: transform $transition-duration $timing-function;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
 
-    @media screen and (min-width: $tablet) {
-      top:98px;
-      
-      padding: $indent;
-      
-      width: 458px;
-    }
-    
-    @media screen and (min-width: $desktop) {
-      top:129px;
-    }
+  transform: translateX(-50%) scale(1);
+
+  transition: transform $transition-duration $timing-function;
+
+  @media screen and (min-width: $tablet) {
+    top: 98px;
+
+    padding: 32px;
+
+    width: 458px;
   }
 
-  .modal__close-button {
-    position: absolute;
-    right: 16px;
-    top: 16px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 4px;
-
-    background-color: getColor('secondary-bg-color');
-    
-    border: none;
-    border-radius: 50%;
-
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.06));
-    
-    cursor: pointer;
-
-    transition-property: fill, outline;
-    transition-duration: $transition-duration;
-    transition-timing-function: $timing-function;
-
-    &:hover, &:focus {
-      fill: getColor('btn-border-accent-color');
-    }
+  @media screen and (min-width: $desktop) {
+    top: 129px;
   }
 
-  .modal__title {
-    text-align: center;
-
-    margin-bottom: 20px;
-
-    line-height: 1.2;
-    font-size: 24px;
+  .backdrop.is-hidden & {
+    transform: translateX(-50%) scale(0.8);
   }
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 4px;
+
+  background-color: getColor('secondary-bg-color');
+
+  border: none;
+  border-radius: 50%;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.06));
+
+  cursor: pointer;
+
+  transition-property: fill, outline;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+
+  &:hover,
+  &:focus {
+    fill: getColor('btn-border-accent-color');
+  }
+}
+
+.modal__title {
+  margin-bottom: 20px;
+
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: center;
+}
 
 //   Order Form
 
-  .order-form__list {
-    margin-bottom: $indent;
-  }
-  .order-form__field {
-    display: flex;
-    flex-direction: column;
+.order-form__list {
+  margin-bottom: $indent;
+}
+.order-form__field {
+  display: flex;
+  flex-direction: column;
 
-    @include bottom-indent (24px);
-  }
-  .order-form__label {
-    margin-left: 12px;
-    margin-bottom: 2px;
+  @include bottom-indent(24px);
+}
+.order-form__label {
+  margin-left: 12px;
+  margin-bottom: 2px;
 
-    font-weight: 500;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+// Input
+.order-form__input {
+  padding: 14px 12px;
+
+  width: 100%;
+  height: 48px;
+
+  border-radius: 30px;
+  border: 1px solid getColor('border-modal-iput-color');
+
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+
+  transition: border-color $transition-duration $timing-function;
+
+  outline: none;
+
+  // Placeholder
+  &::placeholder {
     font-size: 16px;
-    line-height: 1.4;
+    line-height: 1.25;
+
+    color: getColor('placeholder-modal-text-color');
   }
 
-  // Input
-  .order-form__input {
-    padding: 14px 12px;
-    
-    width: 100%;
-    height: 48px;
-
-    border-radius: 30px;
-    border: 2px solid getColor('border-modal-iput-color');
-
-    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
-
-    transition: border-color $transition-duration $timing-function;
-
-    outline: none;
-    
-    // Placeholder
-    &::placeholder {
-        font-size: 16px;
-        line-height: 1.25;
-        color: #c4c4c4;
-      }
-    
-    // Валідність
-    &:not(:placeholder-shown):required:invalid {
-      border-color: getColor('border-error-color');
-      }
-
-    // Валідність + Ховер і Фокус
-    &:valid, &:hover, &:focus {
-      border-color: getColor('border-color');
-    }
+  // Валідність
+  &:not(:placeholder-shown):required:invalid {
+    border-color: getColor('border-error-color');
   }
 
-  // input-error
+  // Валідність + Ховер і Фокус
+  &:valid,
+  &:hover,
+  &:focus {
+    border-color: getColor('border-color');
+  }
+}
+
+// input-error
 .order-form__label {
   position: relative;
 }
@@ -188,7 +193,6 @@
 
   font-weight: 500;
   font-size: 11px;
-  text-align: left;
   line-height: 1.4;
 
   color: getColor('border-error-color');
@@ -208,31 +212,32 @@
 }
 
 // Button
-  .order-form__submit-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    margin: 0 auto;
-    padding: 10px 38px;
+.order-form__submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    width: 106px;
-    height: 40px;
+  margin: 0 auto;
+  padding: 10px 38px;
 
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 1.5;
+  width: 106px;
+  height: 40px;
 
-    background: getColor('secondary-bg-color');
-    
-    border-radius: 30px;
-    border: 2px solid getColor('border-color');
-    
-    cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
 
-    transition: background-color $transition-duration $timing-function;
+  background: getColor('secondary-bg-color');
 
-    &:hover, &:focus {
-      background-color: getColor('link-accent-color');
-    }
+  border-radius: 30px;
+  border: 2px solid getColor('border-color');
+
+  cursor: pointer;
+
+  transition: background-color $transition-duration $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: getColor('link-accent-color');
   }
+}
