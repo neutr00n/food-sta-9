@@ -84,7 +84,7 @@
 
     align-items: flex-start;
 
-    padding-right: 80px;
+    padding-right: 60px;
   }
 
   @media screen and (min-width: $tablet) and (max-width: $tablet-max) {
@@ -98,7 +98,7 @@
   display: block;
 
   @media screen and (min-width: $tablet) {
-    margin-right: 80px;
+    margin-right: 125px;
     padding-bottom: 0;
   }
 
@@ -114,21 +114,25 @@
   flex-direction: column;
   gap: 20px;
 
+  @media screen and (max-width: $mobile-max) {
+    margin-top: 4px;
+  }
+
   @media screen and (min-width: $tablet) {
     display: flex;
-    gap: 39;
+    gap: 28px;
     flex-direction: row;
   }
 
   @media screen and (min-width: $desktop) {
     display: flex;
-    gap: 39;
+    gap: 28px;
     flex-direction: row;
   }
 }
 
 .footer__item--link {
-  color: getColor('primary-text-color');
+  color: getColor('secondary-text-color');
   line-height: calc(16 / 14);
 
   transition: color $transition-duration $timing-function;
@@ -137,6 +141,10 @@
   &:focus {
     color: getColor('link-accent-color');
     text-decoration: underline;
+  }
+
+  @media screen and (min-width: $desktop) {
+    color: getColor('primary-text-color');
   }
 }
 
@@ -161,7 +169,10 @@
 .footer__subscribtion--title {
   color: getColor('primary-text-color');
   margin-bottom: 12;
+
+  font-weight: 500;
   font-size: 14px;
+  line-height: 1.5;
 
   @media screen and (min-width: $tablet) {
     display: flex;
@@ -274,9 +285,11 @@
 
 .footer__help--text {
   display: block;
+
+  margin-top: 20px;
+
   font-size: 10px;
   line-height: calc(14 / 12);
-  margin-top: 10;
 
   @media screen and (min-width: $tablet) {
     font-size: 12px;
@@ -351,7 +364,7 @@
 
   @media screen and (min-width: $desktop) {
     display: flex;
-    margin-top: 100;
+    margin-top: 80px;
   }
 }
 
@@ -362,7 +375,6 @@
   justify-content: space-between;
 
   @media screen and (max-width: $mobile-max) {
-    margin-top: 40px;
     max-width: 440;
     width: 100%;
 
