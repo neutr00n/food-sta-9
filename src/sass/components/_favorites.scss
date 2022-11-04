@@ -54,14 +54,12 @@
   @media screen and (min-width: $tablet) {
     flex-basis: calc((100% - 32px) / 2);
 
-    width: 336px;
     height: 338px;
   }
 
   @media screen and (min-width: $desktop) {
     flex-basis: calc((100% - 32px * 2) / 3);
 
-    width: 395px;
     height: 397px;
   }
 
@@ -78,12 +76,8 @@
   transition: border $transition-duration $timing-function;
 }
 
-.avorites-list__item--mob-hidden {
+.favorites-list__item--mob-hidden {
   @media screen and (max-width: $mobile-max) {
     display: none;
   }
-}
-
-.favorites-list__item--image {
-  height: fit-content;
 }
